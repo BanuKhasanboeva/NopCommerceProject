@@ -1,4 +1,4 @@
-package UData;
+package UtiliData;
 
 public class userData {
     public static final String userName="";

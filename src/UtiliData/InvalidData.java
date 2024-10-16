@@ -1,4 +1,4 @@
-package UData;
+package UtiliData;
 
 public class InvalidData {
     public static final String userName="";
