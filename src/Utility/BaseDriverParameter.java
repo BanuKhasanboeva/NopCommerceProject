@@ -1,5 +1,6 @@
 package Utility;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -13,8 +14,9 @@ import java.time.Duration;
 
 public class BaseDriverParameter {
 
-    public static WebDriver driver;
+    public  WebDriver driver;
     public  WebDriverWait wait;
+    public JavascriptExecutor js;
 
     @BeforeClass
     @Parameters("BrowserTipi")
@@ -29,12 +31,14 @@ public class BaseDriverParameter {
 
         }
 
+        driver.get("https://techno.study/tr/");
 
 
-        //driver.manage().window().maximize(); // Ekranı max yapıyor.
+        driver.manage().window().maximize(); // Ekranı max yapıyor.
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // 20 sn mühlet: sayfayı yükleme mühlet
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // 20 sn mühlet: elementi bulma mühleti
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        js=(JavascriptExecutor)driver;
 
 
     }
