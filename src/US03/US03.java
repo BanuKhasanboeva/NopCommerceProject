@@ -8,29 +8,29 @@ import org.testng.annotations.Test;
 public class US03 extends BaseDriver {
     @Test(dataProvider = "getData")
     public void TC0301(String name, String mail, String phoneNumber, String age, String job) {
-        POM pom = new POM();
+        Elements elements = new Elements();
 
-        pom.apply.click();
-        pom.nameAndSurname.sendKeys(name);
-        pom.eMail.sendKeys(mail);
-        pom.phoneNumber.sendKeys(phoneNumber);
-        pom.age.sendKeys(age);
-        pom.job.sendKeys(job);
+        elements.apply.click();
+        elements.nameAndSurname.sendKeys(name);
+        elements.eMail.sendKeys(mail);
+        elements.phoneNumber.sendKeys(phoneNumber);
+        elements.age.sendKeys(age);
+        elements.job.sendKeys(job);
 
-        Select select = new Select(pom.education);
+        Select select = new Select(elements.education);
 
-        Select select1 = new Select(pom.country);
+        Select select1 = new Select(elements.country);
         select1.selectByVisibleText("Algeria");
 
-        Select select2 = new Select(pom.course);
+        Select select2 = new Select(elements.course);
         select2.selectByValue("Job Center & Arbeitsamt");
 
-        Select select3 = new Select(pom.whereDidYouHearUs);
+        Select select3 = new Select(elements.whereDidYouHearUs);
         select3.selectByValue("Instagram");
 
-        pom.promotion.sendKeys("TestTeam");
-        pom.ReadAndAccepted.click();
-        pom.sent.click();
+        elements.promotion.sendKeys("TestTeam");
+        elements.ReadAndAccepted.click();
+        elements.sent.click();
     }
 
     @DataProvider
