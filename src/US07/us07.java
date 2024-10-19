@@ -72,9 +72,9 @@ public class us07 extends BaseDriverParameter {
 
         // "Detaylı Bilgi" buttonunun görünmesini bekle ve tıklat
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@data-elem-type='button'])[1]//a")));
-        WebElement detayliBilgiAndroid1= driver.findElement(By.xpath("(//div[@data-elem-type='button'])[1]//a"));
+        WebElement veriBilimiButton= driver.findElement(By.xpath("(//div[@data-elem-type='button'])[1]//a"));
         Actions actions= new Actions(driver);
-        actions.click(detayliBilgiAndroid1).build().perform();
+        actions.click(veriBilimiButton).build().perform();
 
         // Sayfaya girince "Techno Study ile Veri Bilimci Olun" yazısını görünceye kadar bekle ve doğrula
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h2)[1]")));
@@ -84,7 +84,6 @@ public class us07 extends BaseDriverParameter {
         // Techno Study Logosu olduğunu doğrula
         WebElement logo= driver.findElement(By.xpath("//div[contains(@class,'_leftside')]//img"));
         Assert.assertTrue(logo.isDisplayed());
-
 
     }
 }
