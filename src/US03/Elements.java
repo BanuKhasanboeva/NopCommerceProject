@@ -1,13 +1,14 @@
 package US03;
 
 import Utility.BaseDriver;
+import Utility.BaseDriverParameter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Elements {
     public Elements() {
-        PageFactory.initElements(BaseDriver.driver, this);
+        PageFactory.initElements(BaseDriverParameter.driver, this);
     }
 
     @FindBy(css = "[class='tn-atom js-click-zero-stat']")
