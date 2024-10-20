@@ -1,11 +1,12 @@
 package US03;
 
 import Utility.BaseDriver;
+import Utility.BaseDriverParameter;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class US03 extends BaseDriver {
+public class US03 extends BaseDriverParameter {
     @Test(dataProvider = "getData")
     public void TC0301(String name, String mail, String phoneNumber, String age, String job) {
         Elements elements = new Elements();
