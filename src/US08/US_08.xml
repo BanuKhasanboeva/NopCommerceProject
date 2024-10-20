@@ -2,15 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="My Suite">
     <test  name="My Test 1" parallel="tests" thread-count="2">
-        <parameter name="browserTipi" value="edge"></parameter>
+        <parameter name="BrowserTipi" value="edge"></parameter>
         <classes>
-            <class name="US8"></class>
+            <class name="US08.us08"></class>
         </classes>
     </test>
     <test  name="My Test 2" parallel="tests" thread-count="2">
-        <parameter name="browserTipi" value="firefox"></parameter>
+        <parameter name="BrowserTipi" value="firefox"></parameter>
         <classes>
-            <class name="US8"></class>
+            <class name="US08.us08"></class>
         </classes>
     </test>
 </suite>

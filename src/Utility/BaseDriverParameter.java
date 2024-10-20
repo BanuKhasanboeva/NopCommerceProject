@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class BaseDriverParameter {
 
-    public  WebDriver driver;
+    public static WebDriver driver;
     public  WebDriverWait wait;
     public JavascriptExecutor js;
 
