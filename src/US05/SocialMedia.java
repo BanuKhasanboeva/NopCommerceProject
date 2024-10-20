@@ -1,6 +1,6 @@
 package US05;
 
-import Pages_US02_04_05.PageHome;
+import Pages_US02_04_05_06.PageHome;
 import Utility.BaseDriverParameter;
 import org.testng.Assert;
 import org.testng.annotations.Test;

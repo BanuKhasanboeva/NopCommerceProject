@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -16,6 +17,7 @@ public class BaseDriverParameter {
 
     public static WebDriver driver;
     public  WebDriverWait wait;
+    public static Actions actions;
     public JavascriptExecutor js;
 
     @BeforeClass
@@ -30,7 +32,7 @@ public class BaseDriverParameter {
             default:driver=new ChromeDriver();
 
         }
-
+        actions=new Actions(driver);
         driver.get("https://techno.study/tr/");
 
 

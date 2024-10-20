@@ -1,4 +1,4 @@
-package Pages_US02_04_05;
+package Pages_US02_04_05_06;
 
 
 import org.openqa.selenium.WebElement;
