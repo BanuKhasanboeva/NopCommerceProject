@@ -1,22 +1,20 @@
 package US08;
 
 import Utility.BaseDriver;
+import Utility.BaseDriverParameter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class us08Elements {
     public us08Elements() {
-        PageFactory.initElements(BaseDriver.driver,this);
+        PageFactory.initElements(BaseDriverParameter.driver,this);
     }
 
-    @FindBy(xpath = "//*[@style='line-height: 29px;']")
-    public WebElement bizeUlasin;
+    @FindBy(xpath = "//label[contains(@class,'checkbox')]//span//a")
+    public WebElement checkBox;
 
-    @FindBy(linkText = " okudum ve kabul ettim.")
-    public WebElement okudumKabul;
-
-    @FindBy(xpath = "//*[a='Kullanım Şartları']")
+    @FindBy(xpath = "//div[@field='text']")
     public WebElement kullanimSartlari;
 
 
