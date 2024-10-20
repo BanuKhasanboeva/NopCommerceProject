@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="My Suite">
+    <test  name="Social Media 1" parallel="tests" thread-count="2">
+        <parameter name="BrowserTipi" value="edge"></parameter>
+        <classes>
+            <class name="US05.SocialMedia"></class>
+        </classes>
+    </test>
+    <test  name="Social Media 2" parallel="tests" thread-count="2">
+        <parameter name="BrowserTipi" value="chrome"></parameter>
+        <classes>
+            <class name="US05.SocialMedia"></class>
+        </classes>
+    </test>
+</suite>

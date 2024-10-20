@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="My Suite">
+    <test  name="Submenu 1" parallel="tests" thread-count="2">
+        <parameter name="BrowserTipi" value="edge"></parameter>
+        <classes>
+            <class name="US04.SubMenu"></class>
+        </classes>
+    </test>
+    <test  name="Submenu 2" parallel="tests" thread-count="2">
+        <parameter name="BrowserTipi" value="chrome"></parameter>
+        <classes>
+            <class name="US04.SubMenu"></class>
+        </classes>
+    </test>
+</suite>
